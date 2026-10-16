@@ -15,7 +15,7 @@ a:hover { text-decoration: underline; }
 
 .toolbar {
   display: grid;
-  grid-template-columns: 220px minmax(300px, 560px) 1fr;
+  grid-template-columns: auto 26ch minmax(320px, 1fr) auto;
   gap: 18px;
   align-items: end;
   padding: 12px 18px;
@@ -28,7 +28,7 @@ a:hover { text-decoration: underline; }
 .search-wrap label { display: block; margin-bottom: 4px; }
 #class-search { width: 100%; padding: 7px 9px; border: 1px solid #999; border-radius: 3px; background: #fff; color: #222; }
 #class-search:focus { border-color: #3576b8; outline: 2px solid #d7e8f8; }
-.display-options { display: flex; align-items: center; gap: 18px; }
+.display-options { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 .display-options label { white-space: nowrap; }
 .class-count { align-self: center; color: #666; }
 
@@ -79,10 +79,21 @@ pre, .class-list { margin: 0; white-space: pre; }
 .credits { padding: 0 18px 18px; }
 [hidden] { display: none !important; }
 
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
   .toolbar { grid-template-columns: 1fr; align-items: stretch; }
 }
 
 .class-icon { display: none; height: 1.32em; width: auto; vertical-align: -0.2em; }
 .use-icons .has-icon .class-icon { display: inline-block; }
 .use-icons .has-icon .class-name { display: none; }
+
+.query-editor { min-width: 0; }
+#query-input { display: block; width: 100%; margin: 4px 0; padding: 7px 9px; resize: vertical; }
+.query-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.text-button { padding: 0; border: 0; background: none; text-decoration: underline; cursor: pointer; }
+.query-panel { white-space: normal; overflow-wrap: anywhere; }
+.query-panel pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.query-example { display: block; width: 100%; padding: 9px 0; border: 0; border-bottom: 1px solid #ddd; background: none; text-align: left; cursor: pointer; }
+.query-example:hover { text-decoration: underline; }
+.query-match { padding: 8px 0; border-bottom: 1px solid #ddd; white-space: pre-wrap; }
+.query-match:last-child, .query-example:last-child { border-bottom: 0; }

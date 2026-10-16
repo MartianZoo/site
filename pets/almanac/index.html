@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light">
     <meta http-equiv="Cache-Control" content="no-store">
     <title>Pets Almanac</title>
-    <link rel="stylesheet" href="almanac.css?v=20261016-2">
+    <link rel="stylesheet" href="almanac.css?v=20261016-3">
   </head>
   <body>
     <header class="toolbar">
@@ -18,6 +18,19 @@
                spellcheck="false" placeholder="Type a class name">
         <div id="class-suggestions" class="suggestions" role="listbox" hidden></div>
       </div>
+      <form id="query-form" class="query-editor">
+        <div><label for="query-input">Queries</label> (<button id="query-examples" type="button" class="text-button">see examples</button>)</div>
+        <textarea id="query-input" rows="3" spellcheck="false" placeholder="Choose an example or enter XPath"></textarea>
+        <div class="query-controls">
+          <label for="query-tree">Tree</label>
+          <select id="query-tree">
+            <option value="AUTHORED">Authored</option>
+            <option value="ELABORATED">Elaborated</option>
+          </select>
+          <button type="submit">Run query</button>
+          <span id="query-status" role="status"></span>
+        </div>
+      </form>
       <div class="display-options">
         <label><input id="use-icons" type="checkbox" checked> Use icons</label>
         <span id="class-count" class="class-count"></span>
@@ -28,6 +41,6 @@
     <footer class="credits">
       Images from <a href="https://www.martianzoo.dev" target="_blank" rel="noopener">Martian Zoo</a>.
     </footer>
-    <script src="almanac.js?v=20261016-2"></script>
+    <script src="almanac.js?v=20261016-3"></script>
   </body>
 </html>
