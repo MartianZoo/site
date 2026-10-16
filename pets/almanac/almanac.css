@@ -28,6 +28,8 @@ a:hover { text-decoration: underline; }
 .search-wrap label { display: block; margin-bottom: 4px; }
 #class-search { width: 100%; padding: 7px 9px; border: 1px solid #999; border-radius: 3px; background: #fff; color: #222; }
 #class-search:focus { border-color: #3576b8; outline: 2px solid #d7e8f8; }
+.display-options { display: flex; align-items: center; gap: 18px; }
+.display-options label { white-space: nowrap; }
 .class-count { align-self: center; color: #666; }
 
 .suggestions {
@@ -80,3 +82,7 @@ pre, .class-list { margin: 0; white-space: pre; }
 @media (max-width: 720px) {
   .toolbar { grid-template-columns: 1fr; align-items: stretch; }
 }
+
+.class-icon { display: none; height: 1.32em; width: auto; vertical-align: -0.2em; }
+.use-icons .has-icon .class-icon { display: inline-block; }
+.use-icons .has-icon .class-name { display: none; }
