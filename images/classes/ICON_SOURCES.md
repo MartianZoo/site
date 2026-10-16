@@ -48,3 +48,11 @@ component icons remain available. Area-related category icons are deferred.
 
 Award was already present when the site repository was created; its original artwork source
 is not recorded. A matching generic Milestone source has not yet been found.
+
+## Generic component icons added 2026-10-16
+
+| Icons | Source |
+| --- | --- |
+| Tag, Tile, Resource | Existing parent PNGs, resized to fit 30px with Lanczos resampling; original artwork and transparency retained. |
+| Phase | The clock geometry from the existing phase-icon SVGs in `_local/phase-icons-review/svg/`, with the phase lettering removed. Reusable source: `Phase.svg`; rendered as transparent 300px and 30px PNGs. |
+| OwnedTile | Image-generation edit using `Tile.png` and the Terraforming Mars app's `assets/ma/landlord.png` as references: a tall gray X centered in the white hexagon. Replaces the blue-cube depiction; saved at 512px and 30px with transparency. |
