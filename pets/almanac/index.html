@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <title>Pets Almanac</title>
+    <link rel="stylesheet" href="almanac.css?v=20261016-1">
+  </head>
+  <body>
+    <header class="toolbar">
+      <span class="brand">Pets Almanac</span>
+      <div class="search-wrap">
+        <label for="class-search">Class</label>
+        <input id="class-search" type="text" role="combobox" aria-autocomplete="list"
+               aria-controls="class-suggestions" aria-expanded="false" autocomplete="off"
+               spellcheck="false" placeholder="Type a class name">
+        <div id="class-suggestions" class="suggestions" role="listbox" hidden></div>
+      </div>
+      <span id="class-count" class="class-count"></span>
+    </header>
+
+    <main id="class-columns" class="columns"></main>
+    <footer class="credits">
+      Images from <a href="https://www.martianzoo.dev" target="_blank" rel="noopener">Martian Zoo</a>.
+    </footer>
+    <script src="almanac.js"></script>
+  </body>
+</html>
