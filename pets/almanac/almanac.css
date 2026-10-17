@@ -38,6 +38,7 @@ input[type="checkbox"] { accent-color: var(--accent); vertical-align: -2px; marg
 a { color: var(--accent); text-underline-offset: 3px; }
 p { margin: 0 0 12px; }
 p:last-child { margin-bottom: 0; }
+.navigation-tip { margin: 0; padding: 8px var(--page-padding); border-bottom: 1px solid var(--line); color: var(--muted); background: var(--surface); }
 
 .toolbar {
   display: grid;
@@ -74,7 +75,7 @@ p:last-child { margin-bottom: 0; }
 
 .columns { display: flex; gap: 16px; width: 100%; padding: var(--page-padding); align-items: flex-start; overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--line) var(--background); }
 /* Intrinsic sizing lets short lists stay narrow; long source and prose wrap at the cap. */
-.class-column { position: relative; flex: 0 0 auto; width: max-content; min-width: 22ch; max-width: min(72ch, calc(100vw - 2 * var(--page-padding))); }
+.class-column { position: relative; flex: 0 0 auto; width: max-content; min-width: min(36ch, calc(100vw - 2 * var(--page-padding))); max-width: min(72ch, calc(100vw - 2 * var(--page-padding))); }
 .class-heading { min-height: 36px; margin-bottom: 10px; padding: 6px 38px 8px 0; border-bottom: 1px solid var(--accent); }
 .class-heading h2 { margin: 0; font: inherit; color: var(--accent); overflow-wrap: anywhere; }
 .dismiss-column { position: absolute; z-index: 2; top: 0; right: 0; width: 28px; height: 28px; padding: 0; color: var(--muted); }
@@ -93,6 +94,8 @@ p:last-child { margin-bottom: 0; }
 dt { color: var(--muted); }
 dd { margin: 3px 0 0; }
 pre, .class-list { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; }
+.source-section { display: block; }
+.source-body-section + .source-body-section { margin-top: .55em; }
 .usage-panels { display: block; }
 .more-count { margin-top: 8px; color: var(--muted); }
 
