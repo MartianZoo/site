@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="light dark">
     <meta http-equiv="Cache-Control" content="no-store">
     <title>Pets Almanac</title>
-    <link rel="stylesheet" href="almanac.css?v=20261016-3">
+    <script>
+      try { document.documentElement.dataset.theme = localStorage.getItem('almanac-theme') || 'light'; } catch (_) {}
+    </script>
+    <link rel="stylesheet" href="almanac.css?v=20261016-4">
   </head>
   <body>
     <header class="toolbar">
@@ -32,15 +35,16 @@
         </div>
       </form>
       <div class="display-options">
+        <label><input id="dark-theme" type="checkbox"> Dark theme</label>
         <label><input id="use-icons" type="checkbox" checked> Use icons</label>
         <span id="class-count" class="class-count"></span>
       </div>
     </header>
 
-    <main id="class-columns" class="columns"></main>
+    <main id="class-columns" class="columns" tabindex="0" aria-label="Almanac columns"></main>
     <footer class="credits">
       Images from <a href="https://www.martianzoo.dev" target="_blank" rel="noopener">Martian Zoo</a>.
     </footer>
-    <script src="almanac.js?v=20261016-3"></script>
+    <script src="almanac.js?v=20261016-4"></script>
   </body>
 </html>
