@@ -14,3 +14,8 @@ requests no search indexing. Build with
 `./gradlew :playground:wasmJsBrowserDistribution`, then replace only this directory
 with the contents of the Playground module's `dist/wasmJs/productionExecutable`.
 The app uses this site's image collection and runs entirely in the browser.
+
+Class-name icons live at `images/classes/30px/<ClassName>.png`. Every image in that
+directory is 30 pixels high, with its original aspect ratio preserved. Playground
+uses only these dedicated icons for class-name substitution; player-color cubes
+take precedence. Keep specific map names and milestone names out of this directory.
