@@ -10,16 +10,16 @@
     <script>
       try { document.documentElement.dataset.theme = localStorage.getItem('almanac-theme') || 'light'; } catch (_) {}
     </script>
-    <link rel="stylesheet" href="almanac.css?v=20261017-6">
+    <link rel="stylesheet" href="almanac.css?v=20261017-9">
   </head>
   <body>
     <header class="toolbar">
       <span class="brand">Pets Almanac</span>
       <div class="search-wrap">
-        <label for="class-search">Look up by class name</label>
         <input id="class-search" type="text" role="combobox" aria-autocomplete="list"
-               aria-controls="class-suggestions" aria-expanded="false" autocomplete="off"
-               spellcheck="false" placeholder="Type a class name">
+               aria-label="Look up by class name" aria-controls="class-suggestions"
+               aria-expanded="false" autocomplete="off" spellcheck="false"
+               placeholder="ClassNameToSearchFor">
         <div id="class-suggestions" class="suggestions" role="listbox" hidden></div>
       </div>
       <button id="query-examples" type="button" class="text-button">see example queries</button>
@@ -32,6 +32,6 @@
     <p class="navigation-tip">Clicking any class name adds a panel to the right (replacing what's there). Things will scroll off the left; close panels to scroll them back on. Thanks to gh/terraforming-mars for the card images. Join the MartianZoo <a href="https://discord.gg/yw3eyKzHN">discord</a>.</p>
 
     <main id="class-columns" class="columns" tabindex="0" aria-label="Almanac columns"></main>
-    <script src="almanac.js?v=20261017-6"></script>
+    <script src="almanac.js?v=20261017-9"></script>
   </body>
 </html>
