@@ -10,7 +10,7 @@
     <script>
       try { document.documentElement.dataset.theme = localStorage.getItem('almanac-theme') || 'light'; } catch (_) {}
     </script>
-    <link rel="stylesheet" href="almanac.css?v=20261017-9">
+    <link rel="stylesheet" href="almanac.css?v=20261017-12">
   </head>
   <body>
     <header class="toolbar">
@@ -25,13 +25,12 @@
       <button id="query-examples" type="button" class="text-button">see example queries</button>
       <div class="display-options">
         <label><input id="dark-theme" type="checkbox"> Dark theme</label>
-        <label><input id="use-icons" type="checkbox"> Use icons</label>
         <span id="class-count" class="class-count"></span>
       </div>
     </header>
     <p class="navigation-tip">Clicking any class name adds a panel to the right (replacing what's there). Things will scroll off the left; close panels to scroll them back on. Thanks to gh/terraforming-mars for the card images. Join the MartianZoo <a href="https://discord.gg/yw3eyKzHN">discord</a>.</p>
 
     <main id="class-columns" class="columns" tabindex="0" aria-label="Almanac columns"></main>
-    <script src="almanac.js?v=20261017-10"></script>
+    <script src="almanac.js?v=20261017-12"></script>
   </body>
 </html>
